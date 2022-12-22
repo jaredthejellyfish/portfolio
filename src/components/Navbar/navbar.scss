@@ -1,0 +1,53 @@
+.navbar-container {
+  height: 80px;
+  width: 100vw;
+  z-index: 1;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 30%;
+}
+
+.navbar-links-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 510px;
+  align-items: center;
+  gap: 80px;
+  font-size: 20px;
+  font-family: "SF Pro Display", sans-serif;
+}
+
+.navbar-logo {
+  background-image: url("https://jaredthejelly.imgix.net/micro-logo.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 53px;
+  height: 53px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.hamburger-react {
+  display: none;
+}
+
+@media screen and (max-width: 930px) {
+  .navbar-links-container {
+    display: none;
+  }
+  .hamburger-react {
+    display: block;
+  }
+
+  .navbar-container {
+    gap: 70%;
+  }
+}
