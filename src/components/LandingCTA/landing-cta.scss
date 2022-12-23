@@ -11,46 +11,54 @@
 }
 
 .landing-cta-container > h2 {
-  color: #BEC9ED;
+  color: #bec9ed;
   font-size: 70px;
-  font-family: 'SF Pro Display', sans-serif;
-  margin: 0 0 15px 0;
+  font-family: "SF Pro Display", sans-serif;
+  margin: 0 0 23px 0;
 }
 
 .landing-cta-container > p {
-  color: #BFBFBF;
+  color: #bfbfbf;
   font-size: 15px;
-  font-family: 'SF Pro Display', sans-serif;
-  margin: 0 0 33px 0;
+  font-family: "SF Pro Display", sans-serif;
+  margin: 0 0 23px 0;
 }
 
 .landing-cta-container div {
   width: 120px;
   height: 35px;
   display: flex;
-  font-family: 'SF Pro Display', sans-serif;
-  font-size: 11px;
+  font-family: "SF Pro Display", sans-serif;
+  font-size: 13px;
   border-radius: 17px;
   justify-content: center;
   align-items: center;
-  border: 1px solid #BFBFBF;
-  color: #BFBFBF;
+  border: 1px solid #bec9ed;
+  color: #bec9ed;
+  transition: ease 0.2s;
+}
+
+.landing-cta-container div:hover {
+  transform: scale(1.015);
+  border: 1.5px solid #c8d2ef;
+  color: #d5defa;
+  transition: ease 0.2s;
 }
 
 @media screen and (max-width: 1300px) {
-.landing-cta-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  width: 395px;
-  position: absolute;
-  top: 15%;
-  left: 15%;
-  padding: 30px;
-  border-radius: 15px;
-  backdrop-filter: blur(5px);
-  transition: ease 0.2s;
-  opacity: 0;
-}
+  .landing-cta-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 395px;
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    transition: ease 0.2s;
+    opacity: 0;
+  }
 }

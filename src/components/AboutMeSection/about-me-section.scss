@@ -1,0 +1,49 @@
+.about-me-section-container {
+  width: 50%;
+  height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  transition: ease 0.5s;
+
+  .about-me-section {
+    width: 500px;
+    margin-top: 120px;
+    line-height: 30px;
+  }
+
+  .about-me-section .white {
+    color: rgb(239, 237, 237);
+    font-family: "SF Pro Display", sans-serif;
+    font-size: 70px;
+    text-shadow: 2px 2px #000000;
+  }
+  .about-me-section .purple {
+    font-family: "SF Pro Display", sans-serif;
+    color: #ccd8ff;
+    font-size: 70px;
+    text-shadow: 2px 2px #000000;
+  }
+
+  .about-me-section p {
+    font-family: "SF Pro Text", sans-serif;
+    font-size: 14px;
+    color: rgb(239, 237, 237);
+    text-shadow: 2px 2px #000000;
+  }
+}
+@media screen and (max-width: 1150px) {
+  .about-me-section-container {
+    width: 100%;
+    height: calc(80vh - 80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: ease 0.5s;
+
+    .about-me-section {
+      width: 500px;
+    }
+  }
+}

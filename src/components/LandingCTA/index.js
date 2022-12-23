@@ -3,7 +3,7 @@ import "./landing-cta.scss";
 
 const LandingCTA = () => {
   return (
-    <div class="landing-cta-container">
+    <div className="landing-cta-container">
       <h2> jaredthejelly </h2>
       <p>
         I'm a full stack developer experienced in HTML, CSS, JavaScript and
@@ -11,7 +11,7 @@ const LandingCTA = () => {
         user-friendly websites and applications that will make a positive
         difference in people's lives and help businesses succeed.
       </p>
-      <Link to="/about">
+      <Link className="landing-cta-button" to="/about">
         <div> LEARN MORE </div>
       </Link>
     </div>
