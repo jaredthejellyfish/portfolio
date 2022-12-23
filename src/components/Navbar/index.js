@@ -20,13 +20,13 @@ const Navbar = () => {
           />
 
           <div className="navbar-links-container">
-            <WavyLink to="/" color="#212121" duration={900} direction="down">
+            <WavyLink to="/" color="#212121" duration={1100} direction="down">
               HOME
             </WavyLink>
             <WavyLink
               to="/about"
               color="#212121"
-              duration={900}
+              duration={1100}
               direction="up"
             >
               ABOUT
@@ -34,7 +34,7 @@ const Navbar = () => {
             <WavyLink
               to="/contact"
               color="#212121"
-              duration={900}
+              duration={1100}
               direction="down"
             >
               CONTACT
@@ -42,7 +42,7 @@ const Navbar = () => {
             <WavyLink
               to="/work"
               color="#212121"
-              duration={900}
+              duration={1100}
               direction="up"
             >
               WORK
