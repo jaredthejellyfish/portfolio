@@ -6,7 +6,7 @@ const AboutMeSection = () => {
   return (
     <div className="about-me-section-container">
       <div className="about-me-section">
-        <h1 className="purple">Jared</h1>
+        <h1 className="purple">Gerard</h1>
         <h1 className="white">Hernandez</h1>
         <p className="text">
           My name is Jared and I'm a full stack developer passionate about

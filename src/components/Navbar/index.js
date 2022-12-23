@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { WavyLink } from "react-wavy-transitions";
 import { useState } from "react";
 import { Squash as Hamburger } from "hamburger-react";
 import NavbarDropdown from "./NavbarDropdown";
@@ -18,11 +18,35 @@ const Navbar = () => {
             alt="logo"
             src="https://jaredthejelly.imgix.net/micro-logo.png"
           />
+
           <div className="navbar-links-container">
-            <Link to="/">HOME</Link>
-            <Link to="/about">ABOUT</Link>
-            <Link to="/contact">CONTACT</Link>
-            <Link to="/work">WORK</Link>
+            <WavyLink to="/" color="#212121" duration={900} direction="down">
+              HOME
+            </WavyLink>
+            <WavyLink
+              to="/about"
+              color="#212121"
+              duration={900}
+              direction="up"
+            >
+              ABOUT
+            </WavyLink>
+            <WavyLink
+              to="/contact"
+              color="#212121"
+              duration={900}
+              direction="down"
+            >
+              CONTACT
+            </WavyLink>
+            <WavyLink
+              to="/work"
+              color="#212121"
+              duration={900}
+              direction="up"
+            >
+              WORK
+            </WavyLink>
           </div>
 
           <Hamburger
@@ -33,7 +57,7 @@ const Navbar = () => {
           />
         </div>
       </nav>
-     { (isOpen ? <NavbarDropdown /> : null )}
+      {isOpen ? <NavbarDropdown /> : null}
     </>
   );
 };

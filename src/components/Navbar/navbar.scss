@@ -17,8 +17,6 @@
   width: 510px;
   align-items: center;
   gap: 80px;
-  font-size: 20px;
-  font-family: "SF Pro Display", sans-serif;
 }
 
 .navbar-logo {
@@ -30,9 +28,11 @@
   height: 53px;
 }
 
-a {
+.navbar-container button {
   text-decoration: none;
   color: white;
+  font-size: 20px;
+  font-family: "SF Pro Display", sans-serif;
 }
 
 .hamburger-react {
