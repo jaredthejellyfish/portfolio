@@ -1,5 +1,5 @@
 import "./about-me-section.scss";
-// import { Link } from "react-router-dom";
+import Socials from '../../components/Socials';
 
 const AboutMeSection = () => {
   return (
@@ -18,8 +18,10 @@ const AboutMeSection = () => {
           passionate about people, animals, learning, coding, the ocean and
           especially jellyfish.
         </p>
+        <Socials />
       </div>
     </div>
+
   );
 };
 
