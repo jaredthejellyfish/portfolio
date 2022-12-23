@@ -1,19 +1,32 @@
 import React from "react";
+import { useState } from "react";
 import "./contact-me-form.scss";
 import { useRef } from "react";
-import emailjs from "@emailjs/browser";
+import * as emailjs from "emailjs-com";
+import FlashMessage from "../../components/FlashMessage";
+
 
 const ContactMeForm = () => {
+  const [flash, setFlash] = useState(false);
   const form = useRef();
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    setFlash(true);
+
+    const template_params = {
+      "name": form.name,
+      "email": form.email,
+      "number": form.number,
+      "message": form.message,
+    };
+
     emailjs
-      .sendForm(
+      .send(
         "service_ww638tg",
         "template_y9rxxst",
-        form.current,
+        template_params,
         "RwgY29A1zfoRzh3Vj"
       )
       .then(
@@ -24,11 +37,11 @@ const ContactMeForm = () => {
           console.log(error.text);
         }
       );
-    console.log(form.name, form.email, form.number, form.message);
   };
 
   return (
     <div className="contact-me-section-container">
+      {(flash ? (<FlashMessage message="Message sent successfully!" success />) : null)}
       <div className="container">
         <div className="screen">
           <div className="screen-header">
@@ -88,7 +101,7 @@ const ContactMeForm = () => {
                   </div>
 
                   <div name="message" className="app-form-group message">
-                    <textarea
+                    <input
                       className="app-form-control"
                       id="message"
                       name="message"

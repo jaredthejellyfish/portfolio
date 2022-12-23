@@ -1,0 +1,20 @@
+.flsh-message {
+  gap: 1em;
+  color: rgb(239, 237, 237);
+  right: 5%;
+  bottom: 5%;
+  padding: 0 15px;
+  display: flex;
+  position: absolute;
+  font-size: 14px;
+  transition: 0.2s;
+  align-items: center;
+  font-weight: 400;
+  text-shadow: none;
+  font-family: "SF Pro Text", sans-serif;
+  border-radius: 0.375em;
+  flex-direction: row;
+  justify-content: center;
+  transform-origin: bottom left;
+  background-color: #515151;
+}

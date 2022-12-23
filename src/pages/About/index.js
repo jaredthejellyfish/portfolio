@@ -1,14 +1,12 @@
-import './about.scss';
-import AboutMeSection from '../../components/AboutMeSection';
-
+import "./about.scss";
+import AboutMeSection from "../../components/AboutMeSection";
 
 const About = () => {
   return (
     <div className="about-container">
-      <AboutMeSection/>
-
+      <AboutMeSection />
     </div>
-    );
+  );
 };
 
 export default About;

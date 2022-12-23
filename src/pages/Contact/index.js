@@ -5,6 +5,7 @@ const Contact = () => {
   return (
     <div className="contact-container">
       <ContactMeForm />
+
     </div>
     );
 };
