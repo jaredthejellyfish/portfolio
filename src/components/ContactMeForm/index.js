@@ -1,6 +1,32 @@
+import React from "react";
 import "./contact-me-form.scss";
+import { useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 const ContactMeForm = () => {
+  const form = useRef();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_ww638tg",
+        "template_y9rxxst",
+        form.current,
+        "RwgY29A1zfoRzh3Vj"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    console.log(form.name, form.email, form.number, form.message);
+  };
+
   return (
     <div className="contact-me-section-container">
       <div className="container">
@@ -23,35 +49,66 @@ const ContactMeForm = () => {
                 <span>CONTACT</span>
                 <span className="white">ME</span>
               </div>
-              <div className="app-contact">
-                CONTACT INFO: +34 605 66 05 21
-              </div>
+              <div className="app-contact">CONTACT INFO: null</div>
             </div>
             <div className="screen-body-item">
               <div className="app-form">
-                <div className="app-form-group">
-                  <input
-                    className="app-form-control"
-                    placeholder="NAME"
-                    value="Jared Hernandez"
-                  />
-                </div>
-                <div className="app-form-group">
-                  <input className="app-form-control" placeholder="EMAIL" />
-                </div>
-                <div className="app-form-group">
-                  <input
-                    className="app-form-control"
-                    placeholder="CONTACT NO"
-                  />
-                </div>
-                <div className="app-form-group message">
-                  <input className="app-form-control" placeholder="MESSAGE" />
-                </div>
-                <div className="app-form-group buttons">
-                  <button className="app-form-button">CANCEL</button>
-                  <button className="app-form-button">SEND</button>
-                </div>
+                <form ref={form} onSubmit={handleSubmit}>
+                  <div className="app-form-group">
+                    <input
+                      className="app-form-control"
+                      type="text"
+                      id="name"
+                      name="name"
+                      placeholder="NAME"
+                      value={form.name}
+                    />
+                  </div>
+
+                  <div className="app-form-group">
+                    <input
+                      className="app-form-control"
+                      type="email"
+                      id="email"
+                      name="email"
+                      placeholder="EMAIL"
+                      value={form.email}
+                    />
+                  </div>
+
+                  <div className="app-form-group">
+                    <input
+                      className="app-form-control"
+                      type="text"
+                      id="number"
+                      name="number"
+                      placeholder="CONTACT NO"
+                      value={form.number}
+                    />
+                  </div>
+
+                  <div name="message" className="app-form-group message">
+                    <textarea
+                      className="app-form-control"
+                      id="message"
+                      name="message"
+                      placeholder="MESSAGE"
+                      value={form.message}
+                    />
+                  </div>
+
+                  <div className="app-form-group buttons">
+                    <button
+                      onClick={() => window.location.reload(false)}
+                      className="app-form-button white"
+                    >
+                      CANCEL
+                    </button>
+                    <button type="submit purple" className="app-form-button">
+                      SEND
+                    </button>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
