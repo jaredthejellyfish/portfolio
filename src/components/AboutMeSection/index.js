@@ -5,8 +5,8 @@ const AboutMeSection = () => {
   return (
     <div className="about-me-section-container">
       <div className="about-me-section">
-        <h1 className="purple">Gerard</h1>
-        <h1 className="white">Almenara</h1>
+        <h1 className="purple">Jared</h1>
+        <h1 className="white">Hernandez</h1>
         <p>
           My name is Jared and I'm a full stack developer passionate about
           creating intuitive and user-friendly websites and applications. <br/>  I'm

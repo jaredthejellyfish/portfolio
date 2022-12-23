@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { Squash as Hamburger } from "hamburger-react";
+import NavbarDropdown from "../NavbarDropdown";
 
 import "./navbar.scss";
 
@@ -32,6 +33,7 @@ const Navbar = () => {
           />
         </div>
       </nav>
+     { (isOpen ? <NavbarDropdown /> : null )}
     </>
   );
 };
