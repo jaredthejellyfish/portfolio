@@ -1,0 +1,44 @@
+.error404-container {
+  background-image: url("https://jaredthejelly.imgix.net/404-banner.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  button {
+    margin-top: 570px;
+    margin-left: -5px;
+    color: #fff;
+    margin-bottom: 65px;
+    background-color: #0c1424;
+    width: 110px;
+    height: 29px;
+    font-size: larger;
+  }
+
+  .error404-text {
+    margin-top: 109px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+      color: #bec9ed;
+      font-size: 3.6rem;
+      margin-bottom: 0;
+    }
+
+    p {
+      color: #fff;
+      font-size: 1rem;
+      margin-top: 0;
+    }
+  }
+
+}

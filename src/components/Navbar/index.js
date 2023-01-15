@@ -3,11 +3,18 @@ import { WavyLink } from "react-wavy-transitions";
 import { useState } from "react";
 import { Squash as Hamburger } from "hamburger-react";
 import NavbarDropdown from "./NavbarDropdown";
+import {useLocation} from "react-router-dom";
 
 import "./navbar.scss";
 
 const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
+
+  let location = useLocation();
+
+  if(location.pathname === '/404'){
+    return null;
+  }
 
   return (
     <>
